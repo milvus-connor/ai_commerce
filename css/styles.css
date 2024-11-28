@@ -1,0 +1,117 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 고정 및 스타일 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* 스크롤 시 고정 */
+    top: 0; /* 화면의 최상단에 고정 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 고정된 헤더에 약간의 그림자 */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* 배너 스타일 */
+#banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+/* 상품 섹션 */
+#products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.product:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* 확대 효과 */
+/* .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+
+/* '자세히 보기' 버튼 스타일 */
+.product .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007BFF; /* 기본 색상 */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.product .btn:hover {
+    background-color: #0056b3; /* 호버 색상 */
+    transform: translateY(-2px); /* 살짝 위로 올라가는 효과 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* 그림자 추가 */
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}

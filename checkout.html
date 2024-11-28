@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 페이지</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="../css/checkout.css"> <!-- 결제 페이지 전용 스타일 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="logo"><a href="../index.html">내 쇼핑몰</a></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="../index.html#products">상품</a></li>
+                <li><a href="../blog/blog.html">블로그</a></li>
+                <li><a href="../index.html#contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 결제 섹션 -->
+    <main>
+        <h1>결제 페이지</h1>
+        <form id="checkout-form" action="confirmation.html" method="post">
+            <!-- 사용자 정보 -->
+            <section class="user-info">
+                <h2>사용자 정보</h2>
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">이메일:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">전화번호:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </section>
+
+            <!-- 배송 정보 -->
+            <section class="shipping-info">
+                <h2>배송 정보</h2>
+                <label for="address">주소:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="zipcode">우편번호:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+                <label for="city">도시:</label>
+                <input type="text" id="city" name="city" required>
+            </section>
+
+            <!-- 결제 수단 -->
+            <section class="payment-method">
+                <h2>결제 수단</h2>
+                <label>
+                    <input type="radio" name="payment" value="credit_card" required> 신용카드
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="bank_transfer"> 계좌 이체
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="kakao_pay"> 카카오페이
+                </label>
+            </section>
+
+            <!-- 주문 확인 -->
+            <section class="order-summary">
+                <h2>주문 요약</h2>
+                <div id="order-items">
+                    <!-- 장바구니 데이터가 여기에 동적으로 추가됩니다 -->
+                </div>
+                <p><strong>총 결제 금액: </strong><span id="total-price">₩0</span></p>
+            </section>
+
+            <!-- 주문 버튼 -->
+            <button type="submit" class="submit-order">결제하기</button>
+        </form>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 내 쇼핑몰. 모든 권리 보유.</p>
+    </footer>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

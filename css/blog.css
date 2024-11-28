@@ -1,0 +1,138 @@
+/* 공통 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* 블로그 스타일 */
+.blog-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-list article {
+    margin-bottom: 20px;
+}
+
+.blog-list article h2 a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.blog-list article h2 a:hover {
+    color: #0056b3;
+}
+
+/* 블로그 포스트 스타일 */
+.blog-post {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* 본문 이미지 */
+.post-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* 인용문 스타일 */
+blockquote {
+    font-style: italic;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 5px solid #007BFF;
+    margin: 20px 0;
+}
+
+/* 공유 버튼 스타일 */
+.post-share {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.share-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.share-btn:hover {
+    background-color: #0056b3;
+}
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* 아이콘과 텍스트 사이의 간격 */
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button i {
+    font-size: 18px; /* 아이콘 크기 */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
