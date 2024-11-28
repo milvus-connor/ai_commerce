@@ -79,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function goToCheckout() {
     // 결제 페이지로 이동
     const cartLength = document.querySelectorAll(".cart .cart-items .cart-item");
-    if(cartLength.length === 0) return
-    window.location.href = "checkout.html";
-
+    if(cartLength.length === 0) {
+        alert("결제할 상품이 없습니다.")
+        return
+    } else {
+        window.location.href = "checkout.html";
+    }
 }
