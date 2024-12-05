@@ -157,6 +157,11 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+.related-item > a {
+    color:#000;
+    text-decoration: none;
+}
+
 .related-item img {
     max-width: 100%;
     height: auto;
