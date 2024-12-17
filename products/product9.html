@@ -33,7 +33,7 @@
             <div class="product-image">
                 <img src="../assets/images/product9.webp" alt="노트북">
             </div>
-            <div class="product-info">
+            <div class="product-info" data-id="p9">
                 <h1>노트북</h1>
                 <p class="price">₩1,200,000</p>
                 <p class="description">최신형 노트북으로, 가볍고 강력한 성능을 제공합니다. 업무와 게임 모두에 적합한 최고의 선택입니다.</p>
@@ -45,7 +45,8 @@
                         name: '노트북',
                         price: 1200000,
                         quantity: parseInt(document.getElementById('quantity').value),
-                        image: 'assets/images/product9.webp'
+                        image: 'assets/images/product9.webp',
+                        id: 'p9'
                     })">장바구니에 담기</button>
                     
                     <!-- 바로 구매 -->
@@ -53,7 +54,8 @@
                         name: '노트북',
                         price: 1200000,
                         quantity: parseInt(document.getElementById('quantity').value),
-                        image: 'assets/images/product9.webp'
+                        image: 'assets/images/product9.webp',
+                        id: 'p9'
                     })">바로 구매하기</button>
                 </div>
             </div>

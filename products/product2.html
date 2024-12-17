@@ -33,7 +33,7 @@
             <div class="product-image">
                 <img src="../assets/images/product2.webp" alt="검정 가죽 지갑">
             </div>
-            <div class="product-info">
+            <div class="product-info" data-id="p2">
                 <h1>검정 가죽 지갑</h1>
                 <p class="price">₩35,000</p>
                 <p class="description">고급스러운 디자인과 실용성을 겸비한 검정 가죽 지갑입니다. 지폐, 카드, 동전을 효율적으로 보관할 수 있습니다.</p>
@@ -46,13 +46,15 @@
                         name: '검정 가죽 지갑',
                         price: 35000,
                         quantity: parseInt(document.getElementById('quantity').value),
-                        image: 'assets/images/product2.webp'
+                        image: 'assets/images/product2.webp',
+                        id: 'p2'
                     })">장바구니에 담기</button>                    
                     <button class="buy-now" onclick="goToCheckoutWithItem({
                         name: '검정 가죽 지갑',
                         price: 35000,
                         quantity: parseInt(document.getElementById('quantity').value),
-                        image: 'assets/images/product2.webp'
+                        image: 'assets/images/product2.webp',
+                        id:'p2'
                     })">바로 구매하기</button>
                 </div>
             </div>

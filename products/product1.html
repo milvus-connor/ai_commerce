@@ -33,7 +33,7 @@
             <div class="product-image">
                 <img src="../assets/images/product1.webp" alt="흰색 티셔츠">
             </div>
-            <div class="product-info">
+            <div class="product-info" data-id="p1">
                 <h1>흰색 티셔츠</h1>
                 <p class="price">₩15,000</p>
                 <p class="description">깔끔하고 심플한 디자인의 흰색 티셔츠로, 어떤 스타일에도 잘 어울립니다. 편안한 착용감과 내구성이 특징입니다.</p>
@@ -46,9 +46,10 @@
                         name: '흰색 티셔츠',
                         price: 15000,
                         quantity: parseInt(document.getElementById('quantity').value),
-                        image: 'assets/images/product1.webp'
+                        image: 'assets/images/product1.webp',
+                        id: 'p1'
                     })">장바구니에 담기</button>                    
-                    <button class="buy-now" onclick="goToCheckoutWithItem('흰색 티셔츠','15000',parseInt(document.getElementById('quantity').value),'assets/images/product1.webp')">바로 구매하기</button>
+                    <button class="buy-now" onclick="goToCheckoutWithItem('흰색 티셔츠','15000',parseInt(document.getElementById('quantity').value),'assets/images/product1.webp', 'p1')">바로 구매하기</button>
                 </div>
             </div>
         </section>
