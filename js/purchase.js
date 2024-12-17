@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             listItem.innerHTML = `<p data-id="${item.id}"><span class="order-prd-name">${item.name}</span> : <span class="order-prd-cnt">${item.quantity}</span>개 - ₩<span class="order-prd-price">${(item.price * item.quantity).toLocaleString()}</span></p>`;
             itemsList.appendChild(listItem);
         });
+        localStorage.removeItem("cart")
     } else {
         // 결제 정보가 없을 경우 메시지 출력
         itemsList.innerHTML = "<li>결제된 상품이 없습니다.</li>";
