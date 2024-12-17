@@ -6,12 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     let total = 0;
 
+    const orderItemList = [];
+
     // 장바구니 항목 렌더링
     cart.forEach((item) => {
         const itemElement = document.createElement("div");
         itemElement.innerHTML = `<p data-id="${item.id}">${item.name} - ${item.quantity}개 - ₩${(item.price * item.quantity).toLocaleString()}</p>`;
         orderItems.appendChild(itemElement);
         total += item.price * item.quantity;
+        let listItem = {
+            catalogObjectType: "Product",
+            catalogObjectId: item.id,
+            price: item.price,
+            quantity: item.quantity
+        }
+        orderItemList.push(listItem)
     });
 
     // 총 결제 금액 업데이트
@@ -36,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             date: new Date().toLocaleString()
         };
         localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
-
+        localStorage.setItem("orderItems", JSON.stringify(orderItemList));
         // 결제 완료 페이지로 이동 (purchase.html)
         window.location.href = "purchase.html";
     });
