@@ -52,17 +52,19 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeCart();
 });
 
-function goToCheckoutWithItem() {
+function goToCheckoutWithItem(n, p, q, i, j) {
+console.log(n,p,q,i,j)
     const product = {
-        name: '흰색 티셔츠',
-        price: 15000,
-        quantity: parseInt(document.getElementById('quantity').value),
-        image: '../assets/images/product1.webp',
+        name: n,
+        price: p,
+        quantity: q,
+        image: i,
+        id: j
     };
 
     // 로컬 스토리지에 상품 정보 저장
     localStorage.setItem('checkoutItem', JSON.stringify(product));
 
     // 결제 페이지로 이동
-    window.location.href = '../checkout.html';
+    window.location.href = '/checkout.html';
 }

@@ -28,7 +28,7 @@ function renderCartItems() {
 
         cartItem.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
-            <div class="item-details">
+            <div class="item-details" data-id="${item.id}">
                 <h2>${item.name}</h2>
                 <p class="price">₩${item.price.toLocaleString()}</p>
                 <label for="quantity-${index}">수량:</label>

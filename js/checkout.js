@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 장바구니 항목 렌더링
     cart.forEach((item) => {
-        const itemElement = document.createElement("p");
-        itemElement.textContent = `${item.name} - ${item.quantity}개 - ₩${(item.price * item.quantity).toLocaleString()}`;
+        const itemElement = document.createElement("div");
+        itemElement.innerHTML = `<p data-id="${item.id}">${item.name} - ${item.quantity}개 - ₩${(item.price * item.quantity).toLocaleString()}</p>`;
         orderItems.appendChild(itemElement);
         total += item.price * item.quantity;
     });

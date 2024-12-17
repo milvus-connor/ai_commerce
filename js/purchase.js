@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 결제한 상품 목록 출력
         orderInfo.items.forEach(item => {
             const listItem = document.createElement("li");
-            listItem.textContent = `${item.name} - ${item.quantity}개 - ₩${(item.price * item.quantity).toLocaleString()}`;
+            listItem.innerHTML = `<p data-id="${item.id}"><span class="order-prd-name">${item.name}</span> : <span class="order-prd-cnt">${item.quantity}</span>개 - ₩<span class="order-prd-price">${(item.price * item.quantity).toLocaleString()}</span></p>`;
             itemsList.appendChild(listItem);
         });
     } else {
