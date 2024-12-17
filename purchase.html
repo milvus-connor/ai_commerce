@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 완료 페이지</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="css/purchase.css"> <!-- 결제 완료 페이지 전용 스타일 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//cdn.evgnet.com/beacon/milvuskorea/ai_demo/scripts/evergage.min.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="logo"><a href="index.html">내 쇼핑몰</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html#products">상품</a></li>
+                <li><a href="blog/blog.html">블로그</a></li>
+                <li><a href="index.html#contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- 뒤로 가기 버튼 -->
+    <button onclick="history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> 뒤로 가기
+    </button>
+
+    <!-- 결제 완료 섹션 -->
+    <main>
+        <section class="order-confirmation">
+            <h1>결제 완료!</h1>
+            <p>고객님의 주문이 성공적으로 처리되었습니다. 이용해 주셔서 감사합니다.</p>
+            <div class="order-details">
+                <p><strong>주문 번호:</strong> <span id="order-id"></span></p>
+                <p><strong>결제 금액:</strong> <span id="total-amount">₩0</span></p>
+            </div>
+            <div class="purchased-items">
+                <h3>결제한 상품</h3>
+                <ul id="purchased-items-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 내 쇼핑몰. 모든 권리 보유.</p>
+    </footer>
+    <script src="js/purchase.js"></script>
+</body>
+</html>
