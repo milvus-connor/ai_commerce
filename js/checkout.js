@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     totalPrice.textContent = `₩${total.toLocaleString()}`;
 
     // 결제 버튼 이벤트 처리
-    const checkoutForm = document.getElementById("checkout-form");
-    checkoutForm.addEventListener("submit", (e) => {
+    const checkoutForm = document.querySelector(".submit-order");
+    checkoutForm.addEventListener("click", (e) => {
         e.preventDefault(); // 폼 기본 동작 방지
 
         // 사용자 입력값 수집
